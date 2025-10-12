@@ -1,0 +1,115 @@
+*{
+    box-sizing: border-box;
+}
+
+.nav-container{
+    display: flex;
+    gap: 3%;
+    border: 2px solid black;
+    margin-bottom: 10px;
+    border-radius: 15px;
+}
+
+.par{
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 16%;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.item5{
+    background-color: darkcyan;
+    border-radius: 10px;
+    
+}
+
+.card-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3%;
+    row-gap: 20px;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding-left: 20px;
+    width: 30%;
+    border: 2px solid black;
+    padding-bottom: 15px;
+}
+
+.button-container{
+    width: 100%;
+}
+
+.editable{
+    margin-bottom: 16px;
+    padding: 15px;
+    width: 88%;
+}
+
+.star:hover{
+    color: darkorange;
+}
+
+.favorite{
+    color: darkorange;
+    border: 2px solid red;
+}
+
+/* .favorite:hover{
+    color: black;
+} */
+
+.trash:hover{
+    color: red;;
+}
+
+.event-type{
+    width: 40px;
+    height: 25px;
+    background: lightgreen;
+    color: black;
+}
+
+.hide{
+    display: none;
+}
+
+.inline{
+    display: inline;
+}
+
+
+.edit{
+    display: inline;
+    font-size: .85em;
+    padding: .40em 1em;
+    border-radius: .3em;
+    outline: 0;
+    color: white;
+    background: #65ccda;
+    border: solid 1px;
+    border-color: rgba(0, 0, 0, .1);
+    cursor: pointer;
+    margin-left: auto;
+}
+
+.save{
+    font-size: .85em;
+    padding: .40em 1em;
+    border-radius: .3em;
+    outline: 0;
+    color: white;
+    background: #c45a53;
+    border: solid 1px;
+    border-color: rgba(0, 0, 0, .1);
+    cursor: pointer;
+    margin-left: auto;
+}
