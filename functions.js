@@ -23,6 +23,46 @@ function createCard(evenim){
     return card;
 }
 
+//functie ce populeaza pagina cu carduri
+// array argument
+
+function attachCards(arr){
+
+    let cardContainer = document.querySelector(".card-container");
+    cardContainer.innerHTML="";
+    arr.map(e=>createCard(e)).forEach(element => {
+        
+        cardContainer.append(element);
+    });
+}
+
+function addCard(){
+
+    modalContainer = document.querySelector(".modal-container");
+    let noteTitle = modalContainer.querySelector(".input-title-modal");
+    let noteDesc = modalContainer.querySelector(".text-area-modal");
+
+
+    let card=document.createElement("div");
+
+    card.classList.add("card");
+    card.classList.add(`card-${evenimente.length +1}`)
+    card.innerHTML=`
+                        <h3>${noteTitle.value}</h3>
+                        <p>test data</p>
+
+                        <p>${noteDesc.value}Lorem ipsum dolor sit amet consectetur.</p>
+                        <div >
+                            <i class="favorite fa-solid fa-star"></i>
+                            <i class="trash fa-solid fa-trash"></i>
+                            <p class="edit">EDIT</p>
+                            <p class="save hide">SAVE</p>
+                        </div>
+                  `;
+    evenimente.push(card);
+    console.log(noteDesc.value);
+}
+
 
 function favoriteCard(card){
     card.classList.toggle("favorite");
@@ -58,46 +98,16 @@ function saveCard(card){
 
 }
  
-//functie ce populeaza pagina cu carduri
-// array argument
 
-function attachCards(arr){
-
-    let cardContainer = document.querySelector(".card-container");
-    cardContainer.innerHTML="";
-    arr.map(e=>createCard(e)).forEach(element => {
-        
-        cardContainer.append(element);
-    });
-}
 
 //functie ce gaseste pozitia unui obiect din arr dupa Id
 
 function findEvenimentById(arr,id){
-    // for(let i=0; i<arr.length; i++){
-    //     if(arr[i].id === id){
-    //     return i;
-    //     }
-    // }
-
-    // const data = arr.filter((element)=>element.id==id)
-    // if(data.length>0){
-    //         console.log("Filtrare dupa id:",data[0])
-    //     return data[0]
-    // }else{
-    //     throw new Error("this id doesn't exist")
-    // }
-
-        const data = arr.filter((element)=>element.descriere.startsWith(id))
-    if(data.length>0){
-            console.log("Filtrare dupa id:",data[0])
-        return data
-    }else{
-        throw new Error("this id doesn't exist")
+    for(let i=0; i<arr.length; i++){
+        if(arr[i].id === id){
+        return i;
+        }
     }
-
-
-    return -1;
 }
 
 

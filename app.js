@@ -1,6 +1,29 @@
+//selectors
+
 let cardContainer=document.querySelector(".card-container");
+let addNotesBtn=document.querySelector(".add-notes-btn");
+let modalContainer = document.querySelector(".modal-container");
+let modalBtnAdd=document.querySelector(".modal-btn-add");
+let modalBtnDiscard=document.querySelector(".modal-btn-discard");
+
+
+addNotesBtn.addEventListener("click", () =>{
+    
+    modalContainer.classList.add("show");
+});
+
+modalBtnAdd.addEventListener("click", () =>{
+    modalContainer.classList.remove("show");
+    addCard();
+    
+});
+
+modalBtnDiscard.addEventListener("click", () =>{
+    modalContainer.classList.remove("show");
+});
 
 attachCards(evenimente);
+
 cardContainer.addEventListener("click", (ev)=>{
     let obj=ev.target;
     let card = obj.closest(".card");    
