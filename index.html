@@ -19,7 +19,7 @@
                 <input type="text" class="input-title-modal" placeholder="enter Title"/>
                 <h3 class="note-description">Note Description</h3>
                 <textarea class="text-area-modal" placeholder="enter description"></textarea>
-                <select>
+                <select class="select-card-type">
                     <option value="">Event type</option>
                     <option class="bus" value="business">Business</option>
                     <option class="soc" value="social">Social</option>
@@ -36,10 +36,11 @@
     
 
     <header class="nav-container">
-        <p class="par">All Notes</p>
-        <p class="par">Business</p>
-        <p class="par">Social</p>
-        <p class="par">Important</p>
+        <p class="par all-notes">All Notes</p>
+        <p class="par favorite-notes">Favorite</p>
+        <p class="par business-par">Business</p>
+        <p class="par social-par">Social</p>
+        <p class="par imp-par">Important</p>
         <p class="par add-notes-btn">Add Notes</p>
         
     </header>
@@ -47,10 +48,10 @@
     
 
     <main>
-        
+                    <p class="no-data hide">No cards</p>
+
         <div class="card-container">
 
-            
             <div class="card">
                 <h3>Book a Ticket</h3>
                 <p>11 March 2009</p>
@@ -96,7 +97,6 @@
                     <p class="edit">EDIT</p>
                     <p class="save hide">SAVE</p>
                     <!-- <div class="event-type"></div> -->
-
                 </div>
         </div>
 

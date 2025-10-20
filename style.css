@@ -215,9 +215,13 @@ body{
     border-radius: .3em;
     outline: 0;
     color: white;
-    background: #c45a53;
+    background: #f05146;
     border: solid 1px;
     border-color: rgba(0, 0, 0, .1);
     cursor: pointer;
     margin-left: auto;
+}
+.no-data{
+
+    border:2px solid red;
 }
